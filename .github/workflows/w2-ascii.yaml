@@ -1,6 +1,6 @@
 name: GHA for cowsay
-on:
-    push:
+on: 
+    workflow_dispatch: 
 jobs:
     myascii:
         name: configure cowsay
