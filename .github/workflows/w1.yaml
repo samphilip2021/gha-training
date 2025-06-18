@@ -1,0 +1,13 @@
+name: GHA 1
+on:
+   push
+jobs:
+  testing:
+      name: testing files
+      runs-on: ubuntu-latest
+      steps:
+          - name: listing files
+            run: ls
+          - name: read the file
+            run: cat index.html
+  
