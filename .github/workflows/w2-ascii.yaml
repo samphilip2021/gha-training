@@ -1,0 +1,17 @@
+name: GHA for cowsay
+on:
+    push:
+jobs:
+    myascii:
+        name: configure cowsay
+        runs-on: ubuntu-latest
+        steps:
+            - name: configure cowsay
+              run: sudo apt-get install -y cowsay
+            - name: running command
+              run: cowsay -f dragon "Run for cover, dragon is there" >> dragon.txt
+            - name: reading file
+              run: |
+                       cat  dragon.txt
+                       grep -i dragon dragon.txt
+                       ls -la        
